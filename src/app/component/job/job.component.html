@@ -1,0 +1,56 @@
+<app-search></app-search>
+<a href="/advanced">Advanced Search</a>
+<br>
+<div *ngIf="loading">loading...</div>
+
+<div *ngIf="errorMessage" class="alert alert-warning">
+  <strong>Warning!</strong> {{errorMessage | json}}
+</div>
+
+<!-- jobTitle: string;
+jobDescription: string;
+employer: string;
+jobType: string;
+salary: string;
+jobCity: string;
+closingDate: string;
+jobState: string;
+published: boolean;
+dateCreated: string; -->
+
+<div class="container">
+  <div class="row">
+    <div class="card " *ngFor="let job of jobs">
+      <div class="card-title">
+        <div class="flex-row">
+          <p class="heading">{{job.jobTitle}}</p>
+          <i class="fa fa-ellipsis-v"></i>
+          <!--<div class="header right"><i class="fa fa-ellipsis-h"></i></div>-->
+        </div>
+
+      </div>
+      <p class="text-muted">{{job.jobDescription}}</p>
+      <div class="row btnrow my-4">
+        <div class="col-4 col-md-3"><button type="button" class="btn btn-outline-success btn-sm"
+            style="background: #00ff002b;">{{job.jobType}}</button></div>
+        <div class="col-4 col-md-3"><button type="button" class="btn btn-outline-danger btn-sm"
+            style="background: #dc35452e;">Director</button></div>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-column pl-3"> <i class="fa fa-bed text-success icon"></i> <span class="txt">4 Bed</span>
+        </div>
+        <div class="d-flex flex-column pl-5"> <i class="fa fa-cab text-primary icon"></i> <span class="txt">3
+            Taxi</span> </div>
+        <div class="d-flex flex-column pl-5"> <i class="fa fa-spoon text-primary icon"></i> <span class="txt">3
+            Supper</span> </div>
+      </div>
+      <div class="mutual"><i class="fas fa-users"></i>&nbsp;&nbsp;<span>{{job.salary}}</span></div>
+      <div class="row btnsubmit mt-4">
+        <div class="col-md-6 col-6"> <button type="button" class="btn btn-primary btn-lg"><span>Apply
+              Now</span></button> </div>
+        <div class="col-md-6 col-6"> <button type="button" class="btn btn-dark btn-lg"><span>Message</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

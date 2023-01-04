@@ -1,0 +1,248 @@
+<div class="container rounded bg-white mt-5 mb-5">
+  <div class="row">
+      <div class="col-md-3 border-right">
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+            <img class="rounded-circle mt-5" src="https://i.imgur.com/O1RmJXT.jpg" width="90">
+            <span class="font-weight-bold">Gcinile Senosi</span>
+            <span class="text-black-50">gci19sen@gmail.com</span>
+            <span>Eswatini</span>
+            <br>
+            <form (ngSubmit)="saveBasicProfile()" #profileForm="ngForm" class="sign-up mb-3">
+              <h6 class="mb-4">Contact Info</h6>
+              <div class="row mt-3">
+                <div class="form-group mt-6">
+                  <i class="fa fa-whatsapp"></i>
+                  <input type="text" 
+                  class="form-control" 
+                  id="whatsapp" 
+                  name="whatsapp" 
+                  placeholder="Enter your Whatsapp numbers">
+                </div>
+                <div class="form-group mt-6">
+                  <i class="fa fa-facebook"></i>
+                  <input type="text" 
+                  class="form-control" 
+                  id="facebook" 
+                  name="facebook" 
+                  placeholder="Enter your Facebook link">
+                </div>
+                <div class="form-group mt-6">
+                  <i class="fa fa-linkedin"></i>
+                  <input type="text" 
+                  class="form-control" 
+                  id="linkedin" 
+                  name="linkedin" 
+                  placeholder="Enter your LinkedIn link">
+                </div>
+                <button type="submit" class="btn save-experience">Update Contact</button>
+              </div>
+            </form>
+          </div>
+      </div>
+      <div class="col-md-5 border-right">
+          <div class="p-3 py-5">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-right">Edit your profile</h6>
+              </div>
+              <form (ngSubmit)="saveBasicProfile()" #profileForm="ngForm" class="sign-up mb-3">
+                <h6 class="mb-4">Basic Info</h6>
+                <div class="row mt-3">
+                  <div class="form-group col-md-6">
+                    <label class="labels">First name</label>
+                    <input type="text" [(ngModel)]="profile.jobTitle" 
+                    class="form-control" 
+                    id="firstname" 
+                    name="firstname" 
+                    placeholder="Enter your first name"
+                    required #firstname="ngModel">
+                  </div>
+                  <div class=" form-group col-md-6">
+                    <label class="labels">Last name</label>
+                    <input type="text" class="form-control" placeholder="Enter your last name">
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="form-group fone col-md-6">
+                    <!--<label for="name">&nbsp;First Name</label>-->
+                    <label class="labels">Job title</label>
+                    <input type="text" [(ngModel)]="profile.jobTitle" 
+                      class="form-control" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Enter your job title"
+                      required #name="ngModel">
+                  </div>
+                  <div class="form-group fone col-md-6">
+                    <!--<label for="name">&nbsp;Last Name</label>-->
+                    <label class="labels">Date Of Birth</label>
+                    <input type="text" [(ngModel)]="profile.dateOfBirth" 
+                      class="form-control" 
+                      id="name" 
+                      name="name" 
+                      placeholder="YYYY-MM-DD"
+                      required #name="ngModel">
+                      <!-- <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div> -->
+                  </div>
+                </div>
+                <div class="form-group fone mt-2">
+                  <label class="labels">Profile Summary</label>
+                  <input type="text" [(ngModel)]="profile.city" 
+                    class="form-control" 
+                    id="city" 
+                    name="city" 
+                    placeholder="Enter your a profile summary or objectives"
+                    required #city="ngModel">
+                  <!-- <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div> -->
+                </div>
+                <div class="row mt-3">
+                  <div class="form-group fone col-md-6">
+                    <!--<label for="name">&nbsp;First Name</label>-->
+                    <label class="labels">Suburb</label>
+                    <input type="text" [(ngModel)]="profile.jobTitle" 
+                      class="form-control" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Enter your suburb"
+                      required #name="ngModel">
+                  </div>
+                  <div class="form-group fone col-md-6">
+                    <!--<label for="name">&nbsp;Last Name</label>-->
+                    <label class="labels">City</label>
+                    <input type="text" [(ngModel)]="profile.dateOfBirth" 
+                      class="form-control" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Enter your city"
+                      required #name="ngModel">
+                      <!-- <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div> -->
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <label class="labels">Country</label>
+                    <input type="text" [(ngModel)]="profile.city" 
+                    class="form-control" 
+                    id="city" 
+                    name="city" 
+                    placeholder="Enter your country"
+                    required #city="ngModel">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="labels">Province/Region</label>
+                    <input type="text" class="form-control" placeholder="Enter your province">
+                  </div>
+              </div>
+                <button type="submit" [disabled]="!profileForm.form.valid" 
+                class="btn btn-success mt-5">Save</button>
+              </form>
+              <form  #userForm="ngForm" class="sign-up">
+                <div class="row mt-3">
+                  <div class="col-md-12"><label class="labels">Qualification</label><input type="text" class="form-control" placeholder="Senior Cerificate"></div>
+                  <div class="col-md-12"><label class="labels">Course</label><input type="text" class="form-control" placeholder="Matric"></div>
+                  <div class="col-md-12"><label class="labels">Institution</label><input type="text" class="form-control" placeholder="Excellence High School"></div>
+                  <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="Eswatini"></div>
+                  <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" placeholder="Hhohho"></div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value="USA"></div>
+                <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="Boston" placeholder="state"></div>
+              </div>
+              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+              </form>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="p-3 py-5">
+              <div class="d-flex justify-content-between align-items-center experience"><span>Add Experience -Change to pop up form</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Add</span></div>
+              <div class="card p-3">
+                <form (ngSubmit)="updateUserProfile()" #experienceForm="ngForm" class="sign-up mb-3">
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <label class="labels">Job title</label>
+                      <input type="text" [(ngModel)]="profile.city" 
+                      class="form-control" 
+                      id="city" 
+                      name="city" 
+                      placeholder="Enter your job title"
+                      required #city="ngModel">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="labels">Employer</label>
+                      <input type="text" [(ngModel)]="profile.city" 
+                      class="form-control" 
+                      id="city" 
+                      name="city" 
+                      placeholder="Enter your employer"
+                      required #city="ngModel">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group fone mt-2">
+                    <label class="labels">Job Description</label>
+                    <input type="text" [(ngModel)]="profile.city" 
+                      class="form-control" 
+                      id="city" 
+                      name="city" 
+                      placeholder="Enter job description"
+                      required #city="ngModel">
+                    <!-- <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div> -->
+                  </div>
+    
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <label class="labels">Start date</label>
+                      <input type="text" [(ngModel)]="profile.city" 
+                      class="form-control" 
+                      id="city" 
+                      name="city" 
+                      placeholder="Enter job start date"
+                      required #city="ngModel">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="labels">End date</label>
+                      <input type="text" [(ngModel)]="profile.city" 
+                      class="form-control" 
+                      id="city" 
+                      name="city" 
+                      placeholder="Enter job end date"
+                      required #city="ngModel">
+                    </div>
+                  </div>
+                  <input type="checkbox" class="form-check-input ml-0" id="exampleCheck1"> 
+                  <label class="form-check-label ml-3" for="exampleCheck1">&nbsp;&nbsp;Still working here?</label>
+                  <div class="d-flex justify-content-between align-items-center experience">
+                    <button type="submit" 
+                    [disabled]="!profileForm.form.valid" 
+                    class="btn save-experience mt-5"><i class="fa fa-floppy-o"></i>
+                    &nbsp;Save
+                  </button>
+                  </div>
+                </form>
+              </div>
+              <br>
+              <div class="expirience-card">
+                <div class="d-flex flex-row mt-3 exp-container">
+                  <i class="fa fa-edit"></i>
+                  <img src="https://i.imgur.com/azSfBM3.png" width="45" height="45">
+                  <div class="work-experience ml-1">
+                    <span class="font-weight-bold d-block">Cleaner</span>
+                    <span class="d-block text-black-50 labels">Twitter Inc.</span>
+                    <span class="d-block text-black-50 labels">March 2017 - May 2020</span>
+                  </div>
+                </div>
+              </div>
+              
+            <!--
+              <div class="d-flex flex-row mt-3 exp-container"><img src="https://img.icons8.com/color/100/000000/facebook.png" width="45" height="45">
+                  <div class="work-experience ml-1"><span class="font-weight-bold d-block">Senior UI/UX Designer</span><span class="d-block text-black-50 labels">Facebook Inc.</span><span class="d-block text-black-50 labels">March,2017 - May 2020</span></div>
+              </div>
+              <hr>
+              <div class="d-flex flex-row mt-3 exp-container"><img src="https://img.icons8.com/color/50/000000/google-logo.png" width="45" height="45">
+                  <div class="work-experience ml-1"><span class="font-weight-bold d-block">UI/UX Designer</span><span class="d-block text-black-50 labels">Google Inc.</span><span class="d-block text-black-50 labels">March,2017 - May 2020</span></div>
+              </div>
+              -->
+          </div>
+      </div>
+  </div>
+</div>

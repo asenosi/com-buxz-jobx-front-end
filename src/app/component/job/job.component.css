@@ -1,0 +1,98 @@
+body {
+    font-family: arial;
+    background: lightpink
+}
+
+.logo {
+    border: 1px solid #f7f4f4
+}
+
+.logo img {
+    width: 60px;
+    height: 60px
+}
+
+.card {
+    display: inline-block;
+    padding: 3vh 3vh 3vh 5vh;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    max-width: 310px;
+    border: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;
+}
+
+.header {
+    margin-bottom: 1vh;
+    margin-right: 2vh;
+    float: right;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.far {
+    color: rgba(15, 198, 239, 0.97) !important;
+    font-size: 16px !important
+}
+
+p.heading {
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+p.text-muted {
+    font-size: 17px;
+    color: #a1a7ae !important
+}
+
+.btn-sm {
+    border-radius: 8px
+}
+
+.fas.fa-users {
+    color: rgba(15, 198, 239, 0.97) !important
+}
+
+.mutual span {
+    font-size: 14px;
+    color: #adb5bd;
+    font-weight: bold
+}
+
+.btn-primary.btn-lg {
+    border-radius: 10px;
+    width: 90%;
+    border: none;
+    background: #000000
+}
+
+.btn-dark.btn-lg {
+    border-radius: 10px;
+    width: 90%;
+    border: none;
+    background: #dee2e6
+}
+
+.btn-dark span {
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold
+}
+
+.btn-primary span {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold
+} 
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}

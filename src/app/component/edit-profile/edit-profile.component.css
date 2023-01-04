@@ -1,0 +1,144 @@
+body {
+    background: #BA68C8
+}
+
+.profile-button {
+    background: #3ec05a;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #c0ecbb
+}
+
+.profile-button:focus {
+    background: #000000;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #000000;
+    color: #fff;
+    cursor: pointer;
+    border: solid 5px #009b40
+} 
+
+.form-control {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #F2F2F2
+}
+
+.form-control::placeholder {
+    font-size: 13px;
+    color: #C2C2CC
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #11C892
+}
+
+.fone input {
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.fone {
+    position: relative
+}
+
+.fone .fas {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    padding: 8px 0px;
+    color: #C2C2CC;
+    font-size: 12px
+}
+
+.fone .image {
+    position: absolute;
+    left: 275px;
+    top: 0px;
+    cursor: pointer
+}
+
+
+.form-check-input {
+    margin-top: 7px;
+}
+
+.form-check-label {
+    font-size: 9px;
+    color: #C2C2CC
+}
+
+.btn-success {
+    padding: 7px 45px;
+    background: #11C892;
+    border: none;
+    border-radius: 1px;
+    font-size: 15px
+}
+
+.btn-success:hover {
+    background: #000000
+}
+
+.btn-success:focus {
+    box-shadow: none
+}
+
+.card {
+    /*background-color: #efefef;*/
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 5px;
+    box-shadow: 5px 5px 5px #cacaca, -5px -5px 10px #ffffff;
+}
+
+.save-experience {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: solid 2px #000000
+} 
+
+.save-experience:hover {
+    background: #000000;
+    color: #ffffff;
+    border: solid 2px #aec7b8
+} 
+
+.expirience-card {
+    /*background-color: #efefef;*/
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #cacaca, -5px -5px 10px #ffffff;
+}
+
+.fa-edit {
+    align-self: start;
+    color: #C2C2CC;
+    
+}
